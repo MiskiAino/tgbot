@@ -42,7 +42,7 @@ now = datetime.datetime.now()
 
 
 def main():
-    new_offset = None
+
     today = now.day
     hour = now.hour
 
@@ -68,7 +68,7 @@ def main():
             greet_bot.send_message(last_chat_id, 'Добрый вечер, {}'.format(last_chat_name))
             today += 1
 
-        new_offset = last_update_id + 1
+
 
 if __name__ == '__main__':
     try:
