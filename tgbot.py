@@ -5,7 +5,7 @@ from telebot.types import Message
 
 TOKEN = '721378927:AAF3OX-i_oXfK0asbUJzDi5JhVVujShLomI'
 
-bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot(TOKEN, threaded=False)
 
 
 @bot.message_handler(commands=['start','help'])
@@ -18,11 +18,5 @@ def echo_digits(message: Message):
 
 # fdf
 
-while True:
-    try:
-        bot.polling(none_stop=True)
 
-    except Exception as e:
-        logger.error(e)  # или просто print(e) если у вас логгера нет,
-        # или import traceback; traceback.print_exc() для печати полной инфы
-        time.sleep(15)
+bot.polling(none_stop=True)
