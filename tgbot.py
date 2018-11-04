@@ -16,7 +16,9 @@ def command_handler(message: Message):
 def echo_digits(message: Message):
     bot.reply_to(message, str(random.random()))
 
-# fdf
+@bot.message_handler(content_types=['sticker'])
+def sticker_handler(message: Message):
+    bot.reply_to(message, 'опять стикеры с оняме')
 
 
 bot.polling(none_stop=True)
