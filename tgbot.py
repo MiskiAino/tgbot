@@ -19,6 +19,3 @@ def echo_digits(message: Message):
 
 
 bot.polling(none_stop=True)
-
-while True: # Don't let the main Thread end.
-    pass
