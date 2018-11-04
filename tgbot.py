@@ -5,7 +5,7 @@ from telebot.types import Message
 
 TOKEN = '721378927:AAF3OX-i_oXfK0asbUJzDi5JhVVujShLomI'
 
-bot = telebot.TeleBot(TOKEN, threaded=False)
+bot = telebot.TeleBot(TOKEN)
 
 
 @bot.message_handler(commands=['start','help'])
