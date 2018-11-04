@@ -19,6 +19,3 @@ def echo_digits(message: Message):
 
 
 bot.polling(none_stop=True)
-import time
-while True:
-    time.sleep(1)
