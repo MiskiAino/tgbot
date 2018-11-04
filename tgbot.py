@@ -14,7 +14,7 @@ def command_handler(message: Message):
 
 @bot.message_handler(content_types=['text'])
 def echo_digits(message: Message):
-    bot.reply_to(message, str(random.random()))
+    bot.reply_to(message, 'каво? чаво?')
 
 @bot.message_handler(content_types=['sticker'])
 def sticker_handler(message: Message):
