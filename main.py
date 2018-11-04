@@ -11,11 +11,9 @@ class BotHandler:
         self.token = token
         self.api_url = "https://api.telegram.org/bot{}/".format(token)
 
-    def get_updates(self, offset=None, timeout=0):
+    def get_updates(self):
         method = 'getUpdates'
-
-        params = {'timeout': timeout, 'offset': offset}
-        resp = requests.get(self.api_url + method, params)
+        resp = requests.get(self.api_url + method)
         result_json = resp.json()['result']
         return result_json
 
@@ -42,12 +40,12 @@ now = datetime.datetime.now()
 
 
 def main():
-    new_offset = None
+    
     today = now.day
     hour = now.hour
 
     while True:
-        greet_bot.get_updates(new_offset)
+        greet_bot.get_updates()
 
         last_update = greet_bot.get_last_update()
 
@@ -60,13 +58,7 @@ def main():
             greet_bot.send_message(last_chat_id, 'Доброе утро, {}'.format(last_chat_name))
             today += 1
 
-        elif last_chat_text.lower() in greetings and today == now.day and 12 <= hour < 17:
-            greet_bot.send_message(last_chat_id, 'Добрый день, {}'.format(last_chat_name))
-            today += 1
 
-        elif last_chat_text.lower() in greetings and today == now.day and 17 <= hour < 23:
-            greet_bot.send_message(last_chat_id, 'Добрый вечер, {}'.format(last_chat_name))
-            today += 1
 
 
 
