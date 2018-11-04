@@ -1,6 +1,8 @@
 import telebot
 import random
 
+from telebot.types import Message
+
 TOKEN = '721378927:AAF3OX-i_oXfK0asbUJzDi5JhVVujShLomI'
 
 bot = telebot.TeleBot(TOKEN)
