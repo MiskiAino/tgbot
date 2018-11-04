@@ -12,8 +12,8 @@ def echo_digits(message: Message):
     bot.reply_to(message, str(random.random()))
 
 
-@bot.message_handler(commands=['start','help'])
-def command_handler(message: Message):
-
+# @bot.message_handler(commands=['start','help'])
+# def command_handler(message: Message):
+#
 
 bot.polling()
