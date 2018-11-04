@@ -40,13 +40,12 @@ now = datetime.datetime.now()
 
 
 def main():
-    
+
     today = now.day
     hour = now.hour
 
     while True:
         greet_bot.get_updates()
-
         last_update = greet_bot.get_last_update()
 
         last_update_id = last_update['update_id']
@@ -54,12 +53,15 @@ def main():
         last_chat_id = last_update['message']['chat']['id']
         last_chat_name = last_update['message']['chat']['first_name']
 
-        if last_chat_text.lower() in greetings and today == now.day and 6 <= hour < 12:
-            greet_bot.send_message(last_chat_id, 'Доброе утро, {}'.format(last_chat_name))
-            today += 1
-
-
-
+        if last_chat_text.lower() in greetings:
+            greet_bot.send_message(last_chat_id, 'не выходи из комнаты')
+            greet_bot.send_message(last_chat_id, 'не совершай ошибку')
+            greet_bot.send_message(last_chat_id, 'зачем тебе солнце')
+            greet_bot.send_message(last_chat_id, 'если ты куришь шипку?')
+            greet_bot.send_message(last_chat_id, 'за дверью бессмысленно все')
+            greet_bot.send_message(last_chat_id, 'даже возглас счастья')
+            greet_bot.send_message(last_chat_id, 'только в уборную')
+            greet_bot.send_message(last_chat_id, 'и срузу же возвращайся')
 
 
 if __name__ == '__main__':
