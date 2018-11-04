@@ -1,9 +1,12 @@
 import requests
 from time import sleep
+import datetime
+
 
 
 
 class BotHandler:
+
 
     def __init__(self, token):
         self.token = token
@@ -11,6 +14,7 @@ class BotHandler:
 
     def get_updates(self, offset=None, timeout=30):
         method = 'getUpdates'
+
         params = {'timeout': timeout, 'offset': offset}
         resp = requests.get(self.api_url + method, params)
         result_json = resp.json()['result']
@@ -33,8 +37,7 @@ class BotHandler:
         return last_update
 
 
-
-greet_bot = BotHandler(token)
+greet_bot = BotHandler("721378927:AAF3OX-i_oXfK0asbUJzDi5JhVVujShLomI")
 greetings = ('здравствуй', 'привет', 'ку', 'здоровa')
 now = datetime.datetime.now()
 
