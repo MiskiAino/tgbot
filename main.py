@@ -1,5 +1,4 @@
 import requests
-from time import sleep
 import datetime
 
 
@@ -36,8 +35,8 @@ class BotHandler:
 
         return last_update
 
-
-greet_bot = BotHandler("721378927:AAF3OX-i_oXfK0asbUJzDi5JhVVujShLomI")
+token = "721378927:AAF3OX-i_oXfK0asbUJzDi5JhVVujShLomI"
+greet_bot = BotHandler(token)
 greetings = ('здравствуй', 'привет', 'ку', 'здоровa')
 now = datetime.datetime.now()
 
