@@ -11,4 +11,9 @@ bot = telebot.TeleBot(TOKEN)
 def echo_digits(message: Message):
     bot.reply_to(message, str(random.random()))
 
-bot.polling(timeout=30)
+
+@bot.message_handler(commands=['start','help'])
+def command_handler(message: Message):
+
+
+bot.polling()
