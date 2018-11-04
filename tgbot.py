@@ -11,4 +11,4 @@ bot = telebot.TeleBot(TOKEN)
 def echo_digits(message: Message):
     bot.reply_to(message, str(random.random()))
 
-bot.polling(timeout=60)
+bot.polling(timeout=30)
