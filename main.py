@@ -42,7 +42,7 @@ now = datetime.datetime.now()
 
 
 def main():
-
+    new_offset = None
     today = now.day
     hour = now.hour
 
