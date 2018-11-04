@@ -16,4 +16,4 @@ def echo_digits(message: Message):
 # def command_handler(message: Message):
 #
 
-bot.polling(none_stop=False, interval=0, timeout=20)
+bot.polling(none_stop=True)
