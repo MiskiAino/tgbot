@@ -1,1 +1,1 @@
-app: python3 tgbot.py
+web app: python3 tgbot.py
