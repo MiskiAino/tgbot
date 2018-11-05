@@ -15,13 +15,14 @@ def command_handler(message: Message):
 
 @bot.message_handx`ler(content_types=['text'])
 def echo_digits(message: Message):
-    bot.reply_to(message, 'каво? чаво?')
+    
 
     if message.from_user.id in USERS:
         reply += f"{message.from_user}, hello again"
+
     bot.reply_to(message, reply)
     USERS.add(message.from_user.id)
-        
+
 
 @bot.message_handler(content_types=['sticker'])
 def sticker_handler(message: Message):
