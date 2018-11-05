@@ -15,7 +15,7 @@ def command_handler(message: Message):
 
 @bot.message_handler(content_types=['text'])
 def echo_digits(message: Message):
-
+    reply = str(random.random())
 
     if message.from_user.id in USERS:
         reply += f"{message.from_user}, hello again"
