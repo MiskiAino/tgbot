@@ -13,9 +13,9 @@ USERS = set()
 def command_handler(message: Message):
     bot.reply_to(message, 'hello, im is helpless bot')
 
-@bot.message_handx`ler(content_types=['text'])
+@bot.message_handler(content_types=['text'])
 def echo_digits(message: Message):
-    
+
 
     if message.from_user.id in USERS:
         reply += f"{message.from_user}, hello again"
