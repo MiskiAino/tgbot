@@ -19,10 +19,10 @@ def echo_digits(message: Message):
 
     if message.from_user.id in USERS:
         reply += f"{message.from_user}, hello again"
-        bot.reply_to(message, reply)
-        USERS.add(message.from_user.id)
-        return
+    bot.reply_to(message, reply)
+    USERS.add(message.from_user.id)
         
+
 @bot.message_handler(content_types=['sticker'])
 def sticker_handler(message: Message):
     bot.reply_to(message, 'опять стикеры с оняме')
