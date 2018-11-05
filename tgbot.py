@@ -18,7 +18,7 @@ def echo_digits(message: Message):
     reply = str(random.random())
 
     if message.from_user.id in USERS:
-        reply += f"{message.from_user.username}, hello again"
+        reply = f"{message.from_user.username}, hello again"
 
     bot.reply_to(message, reply)
     USERS.add(message.from_user.id)
