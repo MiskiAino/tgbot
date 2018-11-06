@@ -14,6 +14,10 @@ def command_handler(message: Message):
     bot.reply_to(message, 'ya nichego ne umeyu')
 
 
+@bot.message_handler(commands=['pogoda'])
+def command_handler(message: Message):
+    bot.reply_to(message, 'pogoda plohaya')
+
 
 @bot.message_handler(content_types=['text'])
 def echo_digits(message: Message):
