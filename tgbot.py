@@ -11,7 +11,12 @@ USERS = set()
 
 @bot.message_handler(commands=['start','help'])
 def command_handler(message: Message):
-    bot.reply_to(message, 'hello, im is helpless bot')
+
+    if message == 'start':
+        bot.reply_to(message, 'hello, im is helpless bot')
+    if message == 'help':
+        bot.reply_to(message, 'hehehe&&7&&')
+
 
 @bot.message_handler(content_types=['text'])
 def echo_digits(message: Message):
