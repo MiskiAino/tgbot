@@ -16,7 +16,13 @@ def command_handler(message: Message):
 
 @bot.message_handler(commands=['pogoda'])
 def command_handler(message: Message):
-    bot.reply_to(message, 'pogoda plohaya')
+    markup = types.ReplyKeyboardMarkup(row_width=2)
+    itembtn1 = types.KeyboardButton('a')
+    itembtn2 = types.KeyboardButton('v')
+    itembtn3 = types.KeyboardButton('d')
+    markup.add(itembtn1, itembtn2, itembtn3)
+    tb.send_message(chat_id, "Choose one letter:", reply_markup=markup)
+
 
 
 @bot.message_handler(content_types=['text'])
