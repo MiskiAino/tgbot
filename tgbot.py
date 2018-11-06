@@ -12,9 +12,9 @@ USERS = set()
 @bot.message_handler(commands=['start','help'])
 def command_handler(message: Message):
 
-    if message == commands[1]:
+    if message == '/start':
         bot.reply_to(message, 'hello, im is helpless bot')
-    if message == commands[2]:
+    if message == '/help':
         bot.reply_to(message, 'hehehe&&7&&')
 
 
